@@ -1,0 +1,161 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript"></script>
+
+    <style>
+        input {
+            border-radius: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #337ab7;
+            padding: 5px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        body {
+            background: url('./back2.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat
+        }
+
+        #formdiv {
+            border: 1pt solid black;
+            margin-top: 7%;
+            margin-left: 5%;
+            background: aliceblue;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            float: left;
+            width: 40%;
+
+        }
+
+        .mandatory {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="formdiv" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Sign Up</h2>
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>First Name</label>
+                    <span class="mandatory">*</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="firstname" placeholder="First name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Last Name</label>
+                    <span class="mandatory">*</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="lastname">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Email Address</label>
+                    <span class="mandatory">*</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="email" name="email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Username</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="username">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Password</label>
+                    <span class="mandatory">*</span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="password" name="password">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Phone number</label>
+                    <span class="mandatory">*</span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="phonenumber">
+                </div>
+            </div>
+
+            </br>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>
+                        <input type="checkbox" name="terms"> I agree with the
+                        <a href="#">Terms and Conditions</a>.</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="submit" value="Sign up">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // Connect to socket.io
+        var socket = io.connect('http://127.0.0.1:3000');
+
+        if (socket === undefined)
+            console.log('Unable to connect to database server...');
+
+
+    </script>
+</body>
+
+</html>
